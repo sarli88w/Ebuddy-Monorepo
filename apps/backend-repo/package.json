@@ -5,6 +5,7 @@
   "main": "core/app.ts",
   "scripts": {
     "build": "tsc",
+    "start": "echo 'No start needed'",
     "dev": "ts-node-dev core/app.ts",
     "prod": "ts-node core/app.ts",
     "seed-run": "ts-node ./seeds/index.ts"

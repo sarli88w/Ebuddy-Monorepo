@@ -6,7 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "prod": "npm run build && npm run start",
+    "seed-run": "echo 'No seed-run needed'"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
