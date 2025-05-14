@@ -1,5 +1,5 @@
 {
-  "name": "ebuddu-monorepo",
+  "name": "ebuddy-monorepo",
   "private": true,
   "scripts": {
     "build": "turbo run build",

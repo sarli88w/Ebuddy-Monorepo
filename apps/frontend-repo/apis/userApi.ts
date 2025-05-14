@@ -1,6 +1,6 @@
 export const getUsers = async (token: string) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/user/fetch-user-data`;
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/user/fetch-user-data`;
     const res = await fetch(url, {
       method: 'POST',
       headers: {
@@ -19,7 +19,7 @@ export const getUsers = async (token: string) => {
 
 export const updateUser = async (token: string, userId: string, userData: { name: string; email: string }) => {
   try {
-    const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/user/update-user-data/${userId}`;
+    const url = `${process.env.NEXT_PUBLIC_API_URL}/user/update-user-data/${userId}`;
     const res = await fetch(url, {
       method: 'POST',
       headers: {

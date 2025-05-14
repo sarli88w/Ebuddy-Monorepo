@@ -4,7 +4,7 @@ export type ApiGetAuthProfileProps = {
 }
 
 export const ApiGetToken = async (body?: {[key: string]: any}) => {
-  const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/token`;
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/auth/token`;
   const res = await fetch(url, {
     method: 'POST',
     headers: {
@@ -20,7 +20,7 @@ export const ApiGetToken = async (body?: {[key: string]: any}) => {
 
 export const ApiGetAuthProfile = async (props: ApiGetAuthProfileProps) => {
   const tokenType = props.token_type ?? 'Bearer';
-  const url = `${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/profile`;
+  const url = `${process.env.NEXT_PUBLIC_API_URL}/auth/profile`;
   const res = await fetch(url, {
     method: 'POST',
     headers: {

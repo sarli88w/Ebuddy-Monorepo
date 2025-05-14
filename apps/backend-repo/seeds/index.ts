@@ -5,12 +5,9 @@ import { initialize } from "fireorm";
 import { seedUsers } from "./seedUsers";
 
 let config = {
-  // your project_id
-  projectId: 'ebuddy-test', 
-  // your client_email
-  clientEmail: 'ebuddy-test@gserviceaccount.com', 
-  // your private_key
-  privateKey: '=== PRIVATE KEY ===', 
+  projectId: process.env.FIREBASE_PROJECT_ID, 
+  clientEmail: process.env.FIREBASE_CLIENT_EMAIL, 
+  privateKey: process.env.FIREBASE_PRIVATE_KEY, 
 };
 
 const pathServiceAccountKey = path.join(__dirname, '../config/serviceAccountKey.json');
